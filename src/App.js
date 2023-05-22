@@ -24,6 +24,10 @@ import DashBoardContainer from "./components/DashBoard/DashBoardContainer";
 import Chart from "./components/Chart";
 import MyDashBoard from "./Pages/MyDashBoard";
 import ChangePassword from "./Pages/ChangePassword";
+import Test from "./Testing Route/Test";
+import Test1 from "./Testing Route/Test1";
+import Test2 from "./Testing Route/Test2";
+import Test3 from "./Testing Route/Test3";
 function App() {
   return (
     <div className="App">
@@ -53,6 +57,12 @@ function App() {
         <Route path="/chart" element={<Chart />} />
         <Route path="/myDashBoard" element={<MyDashBoard />} />
         <Route path="/changePassword" element={<ChangePassword />} />
+
+        <Route path="/test" element={<Test />}>
+          <Route path="" element={<Test1 />} />
+          <Route path="test2" element={<Test2 />} />
+          <Route path="test3" element={<Test3 />} />
+        </Route>
       </Routes>
     </div>
   );
